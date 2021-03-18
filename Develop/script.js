@@ -3,6 +3,12 @@ var lowerCase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'
 var specialCharacters = ['`', '~', '!', '@', '#', '%', '$', '^', '&', '*', '(', ')', '_', '-', '+', '=', ';', ':', '/', '>', '<', '.', ',']
 var numerical = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
 var allOptions = []
+var sizeOfPassword;
+var getPasswordInfo;
+var generatePassword;
+var writePassword;
+var passwordText;
+
 
                           // GET PASSWORD INFO FROM USER
 function getPasswordInfo() {
@@ -61,18 +67,29 @@ function generatePassword() {
 }
 
 // for loop
-// var getPasswordInfo = i;
+
 var sizeOfPassword = sizeOfPassword;
-  for (i = 0; i < sizeOfPassword.length; i++) {
+  for (i = 0; i < sizeOfPassword; i++) {
   var index = Math.floor.parseInt(Math.random() * allOptions.length);
   var computerChoice = allOptions[index];
   randomPassword += computerChoice;
-// return randomPassword
 }
+
+
+allOptions = []
+password = []
+
+for (var = 0; i < allOptions - 1; i++) {
+  password.push(randomCharacter)
+}
+
+var passwordString = password.join("");
+var passwordElement = document.querySelector("password")
+
+passwordElement.text = passwordString
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-
 
 // WRITE PASSWORD
 
