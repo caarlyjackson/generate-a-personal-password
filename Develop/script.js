@@ -6,8 +6,7 @@ var allOptions = []
 
                           // GET PASSWORD INFO FROM USER
 function getPasswordInfo() {
-// function generatePassword() {
-    // Size of password
+// Size of password
   var sizeOfPassword = parseInt(prompt("Please enter the password size you want"));
   console.log(sizeOfPassword);
     // Larger than 8, smaller than 128
@@ -20,36 +19,37 @@ function getPasswordInfo() {
           return;
           }
 
-    // Lowercase
+// Lowercase
   var lowercaseAnswer = confirm("Do you want lowercase letters?");
   console.log(lowercaseAnswer);
 
-    // Uppercase
+// Uppercase
   var uppercaseAnswer = confirm("Do you want uppercase letters?");
   console.log(uppercaseAnswer);
 
-    // Special characters
+// Special characters
   var specialCharactersAnswer = confirm("Do you want special characters?");
   console.log(specialCharactersAnswer);
 
-    // Numerical
+// Numerical
   var numericalAnswer = confirm("Do you want to add numbers?");
   console.log(numericalAnswer);
+}
 
+
+// GENERATE PASSWORD
 // Large array - Build (push)
-function generatePassword(){
+function generatePassword() {
   var passwordInfo = getPasswordInfo()
-
-  if (specialCharactersAnswer = true) {
+  if (specialCharactersAnswer === true) {
       allOptions.push(specialCharacters);
   }
-  if (uppercaseAnswer = true) {
+  if (uppercaseAnswer === true) {
       allOptions.push(upperCase);
   }
-  if (lowercaseAnswer = true) {
+  if (lowercaseAnswer === true) {
       allOptions.push(lowerCase);
   }
-
   var passwordInfo = {
     length : sizeOfPassword,
     hasSpecial : specialCharactersAnswer,
@@ -60,19 +60,21 @@ function generatePassword(){
   return passwordInfo;
 }
 
-
-                          // GENERATE PASSWORD
-
-// FROM RPS HOMEWORK: Get random index from array of options
-  var index = Math.floor(Math.random() * allOptions.length);
+// for loop
+// var getPasswordInfo = i;
+var sizeOfPassword = sizeOfPassword;
+  for (i = 0; i < sizeOfPassword.length; i++) {
+  var index = Math.floor.parseInt(Math.random() * allOptions.length);
   var computerChoice = allOptions[index];
-
+  randomPassword += computerChoice;
+// return randomPassword
+}
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
 
-                          // WRITE PASSWORD
+// WRITE PASSWORD
 
 // Write password to the #password input
 function writePassword() {
