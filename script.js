@@ -9,20 +9,20 @@ var generatePassword;
 var writePassword;
 var passwordText;
 
-// GET PASSWORD INFO FROM USER
+// User selected parameters.
 function getPasswordInfo() {
 // Size of password
   sizeOfPassword = parseInt(prompt("Please enter the password size you want"));
   console.log(sizeOfPassword);
     // Larger than 8, smaller than 128
-          if (sizeOfPassword < 8) {
-            alert("Your password is less than 8 characters")
-          return;
-          }
-          if (sizeOfPassword > 128) {
-            alert("Your password is larger than 128 characters")
-          return;
-          }
+    if (sizeOfPassword < 8) {
+      alert("Your password is less than 8 characters")
+      return;
+  }
+    if (sizeOfPassword > 128) {
+      alert("Your password is larger than 128 characters")
+      return;
+  }
 
 // Lowercase
   var lowercaseAnswer = confirm("Do you want lowercase letters?");
@@ -46,31 +46,30 @@ function getPasswordInfo() {
 // Large array - Build (push)
 var allOptions = []
 // Special Characters True
-function generatePassword() {
-  var passwordInfo = getPasswordInfo()
-  if (specialCharactersAnswer === true) {
-      allOptions.push(specialCharacters);
-  }
+  function generatePassword() {
+    var passwordInfo = getPasswordInfo()
+    if (specialCharactersAnswer === true) {
+    allOptions.push(specialCharacters.toString);
+}
 // Uppercase True
-  if (uppercaseAnswer === true) {
-      allOptions.push(upperCase);
+    if (uppercaseAnswer === true) {
+    allOptions.push(upperCase.length);
   }
 // Lowercase True
-  if (lowercaseAnswer === true) {
-      allOptions.push(lowerCase);
+    if (lowercaseAnswer === true) {
+    allOptions.push(lowerCase.length);
   }
-  var passwordInfo = {
+var passwordInfo = {
     length : sizeOfPassword,
     hasSpecial : specialCharactersAnswer,
     hasNumeric : numericalAnswer,
     hasLowercase: lowercaseAnswer,
     hasUppercase : uppercaseAnswer,
-  }
-  return passwordInfo;
 }
+    return passwordInfo;
+};
 
-// for loop
-
+// For Loop.
 // sizeOfPassword = sizeOfPassword;
   for (i = 0; i < sizeOfPassword; i++) {
   var index = Math.floor.parseInt(Math.random() * allOptions.length);
@@ -79,23 +78,17 @@ function generatePassword() {
 
   var passwordString = password.join("");
   var passwordElement = document.querySelector("password")
-  randomPassword += computerChoice;
+  randomPassword += computerChoice[random];
 
   var password = []
-  // var = 0
   for (; i < sizeOfPassword - 1; i++) {
   password.push(randomCharacter)
-
-  }
-  return passwordString.String;
 }
-
-  console.log();
+  // return passwordString;
+}
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-
-// WRITE PASSWORD
 
 // Write password to the #password input
 function writePassword() {
