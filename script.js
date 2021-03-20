@@ -44,7 +44,6 @@ function getPasswordInfo() {
 
 // GENERATE PASSWORD
 // Large array - Build (push)
-var allOptions = []
 // Special Characters True
   function generatePassword() {
     var passwordInfo = getPasswordInfo()
@@ -71,6 +70,7 @@ var passwordInfo = {
 
 // For Loop.
 // sizeOfPassword = sizeOfPassword;
+  var x = "";
   for (i = 0; i < sizeOfPassword; i++) {
   var index = Math.floor.parseInt(Math.random() * allOptions.length);
   var computerChoice = allOptions[index];
@@ -84,7 +84,6 @@ var passwordInfo = {
   for (; i < sizeOfPassword - 1; i++) {
   password.push(randomCharacter)
 }
-  // return passwordString;
 }
 
 // Assignment Code
